@@ -1,5 +1,6 @@
 # This is the backend for the file sharing app
-The backend uses session based authentication to authenticate users
+The backend uses session based authentication to authenticate users.
+Import the postman collection to test the endpoints
 - # Login
     - ## Client user
         - Username: client

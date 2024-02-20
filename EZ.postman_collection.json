@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "3798c18f-47f5-4e16-95ab-30c40b743b6b",
+		"name": "EZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15530456"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/user/login?username=ops&password=ops",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ops"
+						},
+						{
+							"key": "password",
+							"value": "ops"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/user/logout",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "client@client.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "CLIENT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/signup",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "ZJ2Gyb_HW/Web Tech ASSIGNMENT.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/file/upload",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Uploaded Files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/file/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"file",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download File",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/file/download?file_hash=876093b4f40a123bc08e1064841bbfae",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"file",
+						"download"
+					],
+					"query": [
+						{
+							"key": "file_hash",
+							"value": "876093b4f40a123bc08e1064841bbfae"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
